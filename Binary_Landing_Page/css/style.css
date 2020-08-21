@@ -1,28 +1,32 @@
 @import "reset.css";
 
 @keyframes swing {
-  15% {
-    transform: translateY(10px);
+  50% {
+    transform: translateY(25px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
 
-body{
+body {
   color: #ffffff;
   font-family: 'Lato', sans-serif;
 }
 
-.wrapper{
+.wrapper {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.header{
-	background:url('../img/BG-Header.png')0 0/cover no-repeat;
+.header {
+  background: url('../img/BG-Header.png')0 0/cover no-repeat;
   text-align: center;
   height: 1080px;
 }
 
-.header__logo{
+.header__logo {
   height: 281px;
   display: flex;
   flex-direction: column;
@@ -30,12 +34,12 @@ body{
   justify-content: flex-end;
 }
 
-.header__discription{
+.header__discription {
   padding-top: 160px;
   color: #ffffff;
 }
 
-.header__discription h2{
+.header__discription h2 {
   font-weight: 900;
   font-size: 34px;
   text-transform: uppercase;
@@ -43,7 +47,7 @@ body{
   line-height: 40px;
 }
 
-.header__discription h3{
+.header__discription h3 {
   font-weight: 400;
   font-size: 26px;
   position: relative;
@@ -53,11 +57,11 @@ body{
   line-height: 40px;
 }
 
-.header__discription h3:after{
+.header__discription h3:after {
   content: " ";
-  background: #ffffff ;
+  background: #ffffff;
   display: block;
-  height: 2px ;
+  height: 2px;
   width: 105px;
   position: absolute;
   left: 50%;
@@ -65,7 +69,9 @@ body{
   bottom: 0;
 }
 
-.button{
+.button {
+  display: grid;
+  place-items: center;
   padding: 15px 0;
   height: 45px;
   width: 180px;
@@ -75,30 +81,31 @@ body{
   color: #ffffff;
   letter-spacing: 0.06em;
   transition: all 300ms ease-in-out;
+  background: none;
 }
 
-.button:hover{
+.button:hover {
   transition: all 300ms ease-in-out;
   color: #636b91;
   background: #ffffff;
 }
 
-.arrow-down{
+.arrow-down {
   display: inline-block;
   padding-top: 75px;
 }
 
-.arrow-down:hover{
+.arrow-down:hover {
   animation: swing 0.6s ease;
   animation-iteration-count: 1;
 }
 
-.about{
+.about {
   text-align: center;
-  height: 770px ;
+  height: 770px;
 }
 
-.about__menu{
+.about__menu {
   height: 59px;
   border-bottom: 1px #f2f2f2 solid;
   display: flex;
@@ -106,13 +113,14 @@ body{
   align-items: center;
 }
 
-.about__menu ul{
+.about__menu ul {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.about__menu ul li{
+.about__menu ul li {
+  cursor: pointer;
   padding: 0px 25px;
   font-size: 15px;
   font-weight: 400;
@@ -121,16 +129,16 @@ body{
   transition: all 300ms ease-in-out;
 }
 
-.about__menu ul li:hover{
+.about__menu ul li:hover {
   color: #ada074;
   transition: all 300ms ease-in-out;
 }
 
-.about__menu ul li.active{
+.about__menu ul li.active {
   color: #ada074;
 }
 
-.about__title{
+.about__title {
   margin-top: 125px;
   color: #000000;
   font-size: 34px;
@@ -140,11 +148,11 @@ body{
   padding-bottom: 35px;
 }
 
-.about__title:after{
+.about__title:after {
   content: " ";
-  background: #000000 ;
+  background: #000000;
   display: block;
-  height: 1px ;
+  height: 1px;
   width: 81px;
   position: absolute;
   left: 50%;
@@ -152,7 +160,7 @@ body{
   bottom: 0;
 }
 
-.about__description{
+.about__description {
   padding-top: 40px;
   padding-bottom: 65px;
   font-size: 14px;
@@ -160,17 +168,17 @@ body{
   color: #999999;
 }
 
-.about__list{
+.about__list {
   display: flex;
   justify-content: center;
   align-items: stretch;
 }
 
-.about__element{
+.about__element {
   width: 33.3%;
 }
 
-.about__element-img{
+.about__element-img {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -178,10 +186,10 @@ body{
   height: 92px;
   width: 92px;
   border-radius: 50%;
-  border: 2px #f0f0f0 solid; 
+  border: 2px #f0f0f0 solid;
 }
 
-.about__element-title{
+.about__element-title {
   padding-top: 40px;
   color: #000000;
   font-size: 22px;
@@ -189,20 +197,20 @@ body{
   letter-spacing: 0.16em;
 }
 
-.about__element-text{
+.about__element-text {
   padding-top: 40px;
   font-size: 14px;
   line-height: 26px;
   color: #999999;
 }
 
-.porfolio{
+.porfolio {
   text-align: center;
   background: #f3f3f3;
   height: 1670px;
 }
 
-.porfolio__title{
+.porfolio__title {
   padding-top: 105px;
   color: #000000;
   font-size: 34px;
@@ -212,11 +220,11 @@ body{
   padding-bottom: 40px;
 }
 
-.porfolio__name:after{
+.porfolio__name:after {
   content: " ";
-  background: #000000 ;
+  background: #000000;
   display: block;
-  height: 1px ;
+  height: 1px;
   width: 81px;
   position: absolute;
   left: 50%;
@@ -224,7 +232,7 @@ body{
   bottom: 0;
 }
 
-.porfolio__menu{
+.porfolio__menu {
   margin-top: 50px;
   height: 60px;
   display: flex;
@@ -232,13 +240,13 @@ body{
   align-items: center;
 }
 
-.porfolio__menu ul{
+.porfolio__menu ul {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.porfolio__menu ul li{
+.porfolio__menu ul li {
   padding: 0px 25px;
   font-size: 15px;
   font-weight: 400;
@@ -247,38 +255,39 @@ body{
   transition: all 300ms ease-in-out;
 }
 
-.porfolio__menu ul li:hover{
+.porfolio__menu ul li:hover {
   color: #ada074;
   transition: all 300ms ease-in-out;
 }
 
-.porfolio__menu ul li.active{
+.porfolio__menu ul li.active {
   color: #ada074;
 }
 
-.porfolio__galery{
+.porfolio__galery {
   padding-top: 76px;
   margin: 0 auto;
-  max-width: 1150px; /*ИСПРАВИТЬ ШИРИНУ*/
+  max-width: 1150px;
+  /*ИСПРАВИТЬ ШИРИНУ*/
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 50px;
 }
 
-.porfolio__galery div{
+.porfolio__galery div {
   cursor: pointer;
   margin: 14px;
-  background:#eaeaea;
+  background: #eaeaea;
   height: 363px;
   width: 536px;
 }
 
-.porfolio__galery div img{
-  max-width:100%;
-  max-height:100%;
+.porfolio__galery div img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.porfolio__button{
+.porfolio__button {
   padding: 15px 0;
   height: 45px;
   width: 180px;
@@ -290,20 +299,20 @@ body{
   transition: all 300ms ease-in-out;
 }
 
-.porfolio__button:hover{
+.porfolio__button:hover {
   transition: all 300ms ease-in-out;
   color: #ada074;
   background: #eaeaea;
   border: #ada074 solid 1px;
 }
 
-.partners{
+.partners {
   text-align: center;
   height: 390px;
   background: url('../img/BG-Header-copy.png')0 0/cover no-repeat;
 }
 
-.partners__title{
+.partners__title {
   padding-top: 95px;
   font-size: 30px;
   font-weight: 300;
@@ -312,7 +321,7 @@ body{
   padding-bottom: 90px;
 }
 
-.partners__img{
+.partners__img {
   padding-left: 15%;
   cursor: pointer;
   display: flex;
@@ -325,7 +334,7 @@ body{
   height: 825px;
 }
 
-.contact__wrapper{
+.contact__wrapper {
   margin-top: 120px;
   display: flex;
   flex-direction: row-reverse;
@@ -343,11 +352,11 @@ body{
   padding-bottom: 45px;
 }
 
-.contact__title:after{
+.contact__title:after {
   content: " ";
-  background: #000000 ;
+  background: #000000;
   display: block;
-  height: 1px ;
+  height: 1px;
   width: 81px;
   position: absolute;
   left: 50%;
@@ -371,13 +380,13 @@ body{
   padding-bottom: 25px;
 }
 
-.contact__img{
+.contact__img {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-.contact__img div{
+.contact__img div {
   margin-right: 12px;
   display: flex;
   justify-content: center;
@@ -396,33 +405,33 @@ body{
   color: #000000;
 }
 
-.contact__email a{
+.contact__email a {
   font-weight: 900;
 }
 
-.contact__description{
+.contact__description {
   margin: 0 auto;
 }
 
-.contact__input{
+.contact__input {
   max-width: 382px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-.contact__input div{
- color: #000000;
- font-size: 14px;
- letter-spacing: 0.06em;
- font-weight: 900;
+.contact__input div {
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  font-weight: 900;
 }
 
-.contact__input-email{
+.contact__input-email {
   margin-left: 60px;
 }
 
-.contact__input-textarea{
+.contact__input-textarea {
   margin-top: 75px;
 }
 
@@ -451,10 +460,10 @@ body{
   resize: none;
 }
 
-.contact__input input[type="submit"]{  
+.contact__input input[type="submit"] {
   margin-top: 40px;
   background: none;
-	cursor: pointer;
+  cursor: pointer;
   color: #000000;
   font-size: 14px;
   letter-spacing: 0.06em;
@@ -463,13 +472,13 @@ body{
   transition: all 300ms ease-in-out;
 }
 
-.contact__input input[type="submit"]:hover{
+.contact__input input[type="submit"]:hover {
   color: #000000;
   font-size: 16px;
   transition: all 300ms ease-in-out;
 }
 
-.footer{
+.footer {
   background: #3c3c3c;
   height: 275px;
   text-align: center;
@@ -487,13 +496,13 @@ body{
   align-items: center;
 }
 
-.footer__menu ul{
+.footer__menu ul {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.footer__menu ul li{
+.footer__menu ul li {
   padding: 0px 25px;
   font-size: 14px;
   font-weight: 400;
@@ -501,7 +510,7 @@ body{
   transition: all 300ms ease-in-out;
 }
 
-.footer__menu ul li:hover{
+.footer__menu ul li:hover {
   color: #ffffff;
   transition: all 300ms ease-in-out;
 }
